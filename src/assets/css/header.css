@@ -1,0 +1,70 @@
+.header {
+  width: 1900px;
+  height: 90px;
+  text-decoration-line: line-through;
+  text-decoration-color: aquamarine;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #0f0f0f,
+    #1a1a1a
+  );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* glowing line */
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 200%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00ffe7,
+    #7f5cff,
+    transparent
+  );
+  animation: slide 4s linear infinite;
+}
+
+/* text styling */
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 6px;
+
+  color: #eaeaea;
+  text-transform: uppercase;
+
+  transition: all 0.4s ease;
+}
+
+/* hover effect */
+.header h1:hover {
+  color: #00ff5e;
+  text-shadow:
+    0 0 10px rgba(0, 255, 231, 0.7),
+    0 0 25px rgba(127, 92, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* reuse animation */
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
