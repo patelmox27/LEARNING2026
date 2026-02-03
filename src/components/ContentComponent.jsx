@@ -1,5 +1,5 @@
 import React from "react";
-import zoroImg from "../assets/zoro.jpg";
+import zoroImg from "../assets/image/zoro.jpg";
 
 export default function ContentComponent() {
   const styles = {
