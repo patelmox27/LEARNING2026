@@ -1,0 +1,80 @@
+/* ==============================
+   NETFLIX NAVBAR (FINAL)
+   ============================== */
+
+/* ===== NAVBAR CONTAINER ===== */
+.navbar {
+  padding: 14px 48px;
+  background-color: black;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ===== NETFLIX LOGO ===== */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #e50914 !important;
+  margin-right: 36px;
+}
+
+.navbar-brand:hover {
+  color: #ff1f1f !important;
+  text-shadow: 0 0 12px rgba(229, 9, 20, 0.8);
+}
+
+/* ===== NAV LINKS ===== */
+.navbar .nav-link {
+  color: #f9f2f2 !important;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 18px;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* Netflix-style hover */
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+  transform: scale(1.06);
+}
+
+/* ===== ACTIVE LINK ===== */
+.navbar .nav-link.active {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* ===== REMOVE UNDERLINE EFFECT ===== */
+.navbar .nav-link::after {
+  display: none;
+}
+
+/* ===== TOGGLER ===== */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ===== MOBILE MENU ===== */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .navbar .nav-link {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+}

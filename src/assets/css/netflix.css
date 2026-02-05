@@ -1,0 +1,148 @@
+/* ===== PAGE BACKGROUND ===== */
+.netflix-container {
+  
+  background-color: #141414;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* ===== TITLE ===== */
+.netflix-title {
+  color: #e50914;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* ===== GRID LIKE NETFLIX ROW ===== */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* ===== MOVIE CARD ===== */
+.movie-card {
+  height: 140px;
+  background: linear-gradient(135deg, #222, #000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+/* HOVER ZOOM EFFECT (NETFLIX FEEL) */
+.movie-card:hover {
+  transform: scale(1.08);
+  z-index: 5;
+}
+
+/* ===== OVERLAY TEXT ===== */
+.movie-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.movie-overlay h3 {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+/* ===== show===== */ 
+
+.netflix-container {
+  background-color: #141414;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+/* ===== Teams===== */
+.netflix-title {
+  text-align: center;
+  color: #e50914;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+/* ===== GRID LAYOUT ===== */
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+/* ===== SHOW CARD ===== */
+.show-card {
+  height: 140px;
+  background: linear-gradient(135deg, #222, #000);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+}
+
+.show-card:hover {
+  transform: scale(1.08);
+  z-index: 5;
+}
+
+/* ===== TEXT OVERLAY ===== */
+.show-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.show-overlay h3 {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+/* ===== GRID ===== */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* ===== TEAM CARD ===== */
+.team-card {
+  height: 140px;
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.6);
+}
+
+.team-card:hover {
+  transform: scale(1.08);
+  z-index: 5;
+}
+
+/* ===== OVERLAY ===== */
+.team-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.team-overlay h3 {
+  color: white;
+  font-size: 15px;
+  margin: 0;
+}

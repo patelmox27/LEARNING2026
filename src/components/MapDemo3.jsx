@@ -26,7 +26,7 @@ export const MapDemo3 = () => {
             <tbody>
                 {
                     students.map((st)=>{
-                        return <tr>
+                        return <tr key={st.id}>
                             <td>{st.id}</td>
                             <td>{st.name}</td>
                             <td>{st.age}</td>
