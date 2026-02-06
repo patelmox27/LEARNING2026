@@ -1,10 +1,11 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+/* eslint-disable no-unused-vars */
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import { useEffect } from "react";
 
 
-//import './App.css'
+import './App.css'
 import { HeaderComponent } from "./components/HeaderComponent";
 import { Header1 } from "./components/Header1";
 import { FooterComponent } from "./components/FooterComponent";
@@ -26,6 +27,10 @@ import { Watch } from "./components/Watch";
 import { Teams } from "./components/Teams";
 import { Playing } from "./components/Playing";
 import { Routecomponent } from "./components/Routecomponent";
+import { FunctionDemo1 } from "./components/FunctionDemo1";
+import { UseStateDemo1 } from './components/UseStateDemo1';
+import { UseStateDemo2 } from './components/UseStateDemo2';
+import { UseStateDemo3 } from './components/UseStateDemo3';
 
 function App() {
   useEffect(() => {
@@ -58,6 +63,11 @@ function App() {
         <Route path="/teams" element={<Teams />} />
         <Route path="/*" element={<Error />} />
         <Route path="/routecomponent" element={<Routecomponent />} />
+        <Route path="/Functiondemo1" element={<FunctionDemo1 />} />
+        <Route path='/UseStateDemo1' element={<UseStateDemo1 />} />
+        <Route path='/UsestateDemo2' element={<UseStateDemo2 />} />
+        <Route path='/UsestateDemo3' element={<UseStateDemo3 />} />
+
 
 
 

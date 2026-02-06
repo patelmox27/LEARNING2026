@@ -1,46 +1,51 @@
-/* ===== ROOT SETTINGS ===== */
+html {
+  background-color: #121212 !important;
+}
+
+body {
+  background-color: #121212 !important;
+  /* dark background of body*/
+  color: white;
+  margin: 0;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: dark;
-  background-color: rgb(13, 13, 13);
-  color: white;
-
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ===== BODY ===== */
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: black;
-  color: white;
-}
-
-/* ===== LINKS ===== */
 a {
   font-weight: 500;
-  color: white;
-  text-decoration: none;
+  color: #646cff;
+  text-decoration: inherit;
 }
 
 a:hover {
-  color: red;
+  color: #535bf2;
 }
 
-/* ===== HEADINGS ===== */
+body {
+  margin: 0;
+  /* display: flex;
+  place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-/* ===== BUTTONS ===== */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -49,60 +54,50 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
-  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: red;
+  border-color: #646cff;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 2px solid red;
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background-color: black;
-  padding: 15px 40px;
-  border-bottom: 1px solid #222;
-}
-
-.logo {
-  color: red;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
-  color: white;
-  font-size: 16px;
-}
-
-.nav-links li a:hover {
-  color: red;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 15px;
-    font-size: 14px;
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+/* DARK MODE */
+html.dark {
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+html.dark a {
+  color: #8ab4f8;
+}
+
+html.dark button {
+  background-color: #333;
+  color: white;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: #121212;
 }
