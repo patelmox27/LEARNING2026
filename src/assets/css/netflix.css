@@ -114,17 +114,28 @@
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 18px;
 }
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+}
+
 
 /* ===== TEAM CARD ===== */
 .team-card {
-  height: 140px;
-  background: linear-gradient(135deg, #1a1a1a, #000);
+  height: 180px;                 /* little bigger like Netflix */
   border-radius: 6px;
   overflow: hidden;
   position: relative;
   text-decoration: none;
   transition: 0.3s ease;
   box-shadow: 0px 0px 12px rgba(0,0,0,0.6);
+
+  /* IMAGE SETTINGS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .team-card:hover {

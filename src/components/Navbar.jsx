@@ -43,6 +43,9 @@ export const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/Portfolio">Portfolio</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/RouteComponent">RouteComponent</Link>
+            </li>
 
           </ul>
         </div>

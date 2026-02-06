@@ -2,8 +2,43 @@ import React, { useState } from "react";
 import zoroImg from "../assets/image/zoro.jpg";
 
 export default function ContentComponent() {
+  const BasicInfo = ({ styles }) => {
+    return (
+      <div style={styles.content}>
+        <p>
+          Pirate Hunter Zoro is the swordsman of the Straw Hat Pirates.
+          Master of the Three Sword Style and loyal to Luffy.
+        </p>
 
-  const [view, setView] = useState(""); 
+        <ul>
+          <li>Birthday: November 11</li>
+          <li>Alias: Pirate Hunter</li>
+          <li>Occupation: Pirate</li>
+          <li>Bounty: 1,111,000,000</li>
+        </ul>
+      </div>
+    );
+  };
+
+  const MoreInfo = ({ styles }) => {
+    return (
+      <div style={styles.content}>
+        <p>
+          Zoro follows a strict warrior code built on honor and strength.
+          His dream is to become the world's greatest swordsman.
+        </p>
+
+        <h3>Abilities</h3>
+        <ul>
+          <li>Busoshoku Haki</li>
+          <li>Kenbunshoku Haki</li>
+          <li>Haoshoku Haki</li>
+        </ul>
+      </div>
+    );
+  };
+
+  const [view, setView] = useState("");
   // "" = nothing, "play" = basic info, "more" = extra info
 
   const styles = {
@@ -33,7 +68,7 @@ export default function ContentComponent() {
 
     tags: {
       marginTop: "10px",
-      color: "#d1d5db",
+      color: "#14c011",
       fontSize: "15px",
     },
 
@@ -66,7 +101,7 @@ export default function ContentComponent() {
     content: {
       backgroundColor: "#141414",
       padding: "40px 80px",
-      color: "#e5e7eb",
+      color: "#0fd00f",
       lineHeight: "1.8",
     }
   };
@@ -99,7 +134,7 @@ export default function ContentComponent() {
       {/* ===== BASIC INFO (PLAY CLICK) ===== */}
       {view === "play" && (
         <div style={styles.content}>
-          
+
           <p>
             Pirate Hunter Zoro is the swordsman of the Straw Hat Pirates.
             Master of the Three Sword Style and loyal to Luffy.
@@ -117,7 +152,7 @@ export default function ContentComponent() {
       {/* ===== EXTRA INFO (MORE INFO CLICK) ===== */}
       {view === "more" && (
         <div style={styles.content}>
-          
+
 
           <p>
             Zoro follows a strict warrior code built on honor and strength.

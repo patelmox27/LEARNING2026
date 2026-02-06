@@ -15,7 +15,7 @@ import { MapDemo2 } from './components/MapDemo2';
 import { MapDemo3 } from './components/MapDemo3';
 import { MapDemo4 } from './components/MapDemo4';
 import { MapDemo5 } from './components/MapDemo5';
-import { Route,Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Navbar } from './components/Navbar';
 
 import { NetflixHome } from "./components/NetflixHome";
@@ -25,9 +25,10 @@ import { Home } from "./components/Home";
 import { Watch } from "./components/Watch";
 import { Teams } from "./components/Teams";
 import { Playing } from "./components/Playing";
+import { Routecomponent } from "./components/Routecomponent";
 
 function App() {
-   useEffect(() => {
+  useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
 
     const handleChange = (e) => {
@@ -40,34 +41,35 @@ function App() {
     return () => media.removeEventListener("change", handleChange);
   }, []);
 
-  
-  return(
+
+  return (
     <div>
       <Navbar></Navbar>
       <Routes>
-        <Route path='/' element={<NetflixHome/>}/>
-        <Route path='/netflixshows' element={<NetflixShows/>}/>
-        <Route path='/netflixmovies' element={<NetflixMovies/>}/>
-       <Route path="/portfolio" element={<ContentComponent/>}/>
-       <Route path="/mapdemo1" element={<MapDemo1/>}/>
-       <Route path="/mapdemo2" element={<MapDemo2/>}/>
-       <Route path="/mapdemo3" element={<MapDemo3/>}/>
-       <Route path="/mapdemo4" element={<MapDemo4/>}/>
-       <Route path="/mapdemo5" element={<MapDemo5/>}/>
-       <Route path="/teams" element={<Teams/>}/>
-       <Route path="/*" element={<Error/>}/>
+        <Route path='/' element={<NetflixHome />} />
+        <Route path='/netflixshows' element={<NetflixShows />} />
+        <Route path='/netflixmovies' element={<NetflixMovies />} />
+        <Route path="/portfolio" element={<ContentComponent />} />
+        <Route path="/mapdemo1" element={<MapDemo1 />} />
+        <Route path="/mapdemo2" element={<MapDemo2 />} />
+        <Route path="/mapdemo3" element={<MapDemo3 />} />
+        <Route path="/mapdemo4" element={<MapDemo4 />} />
+        <Route path="/mapdemo5" element={<MapDemo5 />} />
+        <Route path="/teams" element={<Teams />} />
+        <Route path="/*" element={<Error />} />
+        <Route path="/routecomponent" element={<Routecomponent />} />
 
 
 
-       <Route path="watch/:movieName" element={<Watch/>}/>
-       <Route path="playing/:TeamName" element={<Playing/>}/>
+        <Route path="watch/:movieName" element={<Watch />} />
+        <Route path="playing/:TeamName" element={<Playing />} />
 
       </Routes>
-    
+
     </div>
 
   );
-    
-  
+
+
 }
 export default App
