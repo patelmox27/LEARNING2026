@@ -1,6 +1,6 @@
 /* ===== PAGE BACKGROUND ===== */
 .netflix-container {
-  
+
   background-color: #141414;
   min-height: 100vh;
   padding: 30px;
@@ -30,7 +30,7 @@
   overflow: hidden;
   text-decoration: none;
   transition: 0.3s ease;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* HOVER ZOOM EFFECT (NETFLIX FEEL) */
@@ -45,7 +45,7 @@
   bottom: 0;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
 }
 
 .movie-overlay h3 {
@@ -53,7 +53,8 @@
   font-size: 14px;
   margin: 0;
 }
-/* ===== show===== */ 
+
+/* ===== show===== */
 
 .netflix-container {
   background-color: #141414;
@@ -86,7 +87,7 @@
   overflow: hidden;
   text-decoration: none;
   transition: 0.3s ease;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
 .show-card:hover {
@@ -100,37 +101,41 @@
   bottom: 0;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
 }
 
 .show-overlay h3 {
-  color: white;
+  color: rgb(245, 237, 237);
   font-size: 14px;
   margin: 0;
+
 }
+
 /* ===== GRID ===== */
 .teams-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 18px;
 }
+
 .team-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
 }
 
 
 /* ===== TEAM CARD ===== */
 .team-card {
-  height: 180px;                 /* little bigger like Netflix */
+  height: 180px;
+  /* little bigger like Netflix */
   border-radius: 6px;
   overflow: hidden;
   position: relative;
   text-decoration: none;
   transition: 0.3s ease;
-  box-shadow: 0px 0px 12px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
 
   /* IMAGE SETTINGS */
   background-size: cover;
@@ -149,7 +154,7 @@
   bottom: 0;
   width: 100%;
   padding: 12px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
 }
 
 .team-overlay h3 {

@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom'
 
 export const Watch = () => {
 
-  const {movieName} = useParams();
-  
+  const { movieName } = useParams();
+
 
   return (
-    <div><h1>Watching: {movieName}</h1></div>
-     
+    <div><h1 style={{ color: "whitesmoke" }}>Watching: {movieName}</h1></div>
+
   )
 }
