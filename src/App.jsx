@@ -31,6 +31,7 @@ import { FunctionDemo1 } from "./components/FunctionDemo1";
 import { UseStateDemo1 } from './components/UseStateDemo1';
 import { UseStateDemo2 } from './components/UseStateDemo2';
 import { UseStateDemo3 } from './components/UseStateDemo3';
+import { Employees } from './components/Employees';
 
 function App() {
   useEffect(() => {
@@ -67,6 +68,8 @@ function App() {
         <Route path='/UseStateDemo1' element={<UseStateDemo1 />} />
         <Route path='/UsestateDemo2' element={<UseStateDemo2 />} />
         <Route path='/UsestateDemo3' element={<UseStateDemo3 />} />
+        <Route path='/Employees' element={<Employees />} />
+
 
 
 
