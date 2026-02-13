@@ -17,8 +17,8 @@ export const Employees = () => {
   ];
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>Employees</h1>
+    <div >
+      <h1 style={{ textAlign: "center", color: "wheat" }}>Employees</h1>
       {/* //title = {title}   key = {value}  */}
       <EmployeeList title={title} company={compnay} employees={employees}></EmployeeList>
     </div>

@@ -4,7 +4,7 @@ import { SubEmployeeList } from './SubEmployeeList'
 export const EmployeeList = (props) => {
   console.log("emplist ", props)
   return (
-    <div style={{ textAlign: "center", color: "whitesmoke" }}><h1>EmployeeList</h1>
+    <div style={{ color: "whitesmoke" }}><h1>EmployeeList</h1>
       {props.title}
       <h1>{props.company.name}</h1>
       <h1>{props.company.year}</h1>
