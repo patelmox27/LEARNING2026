@@ -36,6 +36,10 @@ import { InputDemo1 } from './components/input/inputDemo1';
 import { InputDemo2 } from './components/input/InputDemo2';
 import { FormDemo1 } from './components/form/FormDemo1';
 import { FormDemo2 } from './components/form/FormDemo2';
+import { FormDemo3 } from './components/form/FormDemo3';
+import { FormDemo4 } from './components/form/FormDemo4';
+import { Country } from './components/input/Country';
+import { PasswordForm } from './components/form/PasswordForm';
 
 function App() {
   useEffect(() => {
@@ -77,6 +81,11 @@ function App() {
         <Route path='/InputDemo2' element={<InputDemo2 />} />
         <Route path='/FormDemo1' element={<FormDemo1 />} />
         <Route path='/FormDemo2' element={<FormDemo2 />} />
+        <Route path='/FormDemo3' element={<FormDemo3 />} />
+        <Route path='FormDemo4' element={<FormDemo4 />} />
+        <Route path='/Country' element={<Country />} />
+        <Route path='/PasswordForm' element={<PasswordForm />} />
+
 
 
 
