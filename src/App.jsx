@@ -40,6 +40,7 @@ import { FormDemo3 } from './components/form/FormDemo3';
 import { FormDemo4 } from './components/form/FormDemo4';
 import { Country } from './components/input/Country';
 import { PasswordForm } from './components/form/PasswordForm';
+import { ApiDemo1 } from './components/api/ApiDemo1';
 
 function App() {
   useEffect(() => {
@@ -85,6 +86,7 @@ function App() {
         <Route path='FormDemo4' element={<FormDemo4 />} />
         <Route path='/Country' element={<Country />} />
         <Route path='/PasswordForm' element={<PasswordForm />} />
+        <Route path='/ApiDemo1' element={<ApiDemo1 />} />
 
 
 

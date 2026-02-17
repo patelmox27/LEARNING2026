@@ -7,66 +7,84 @@ export const PasswordForm = () => {
     handleSubmit,
     formState: { errors },
     watch,
-  } = useForm({ mode: "onChange" });
-
-  const submitHandler = (data) => {
-    console.log("Form Data:", data);
-  };
+  } = useForm({ mode: "onChange" }); // ✅ fixed
 
   // eslint-disable-next-line react-hooks/incompatible-library
-  const password = watch("password"); // watch example
+  const password = watch("password") || ""; // ✅ safe
+
+  const submithandler = (data) => {
+    console.log(data);
+    alert("Password Created Successfully");
+  };
+
+  const validationScheme = {
+    passwordValidator: {
+      required: {
+        value: true,
+        message: "**Password is required",
+      },
+      validate: {
+        capital: (value) =>
+          /[A-Z]/.test(value) || "**Must contain one capital letter",
+
+        small: (value) =>
+          /[a-z]/.test(value) || "**Must contain one small letter",
+
+        specialchar: (value) =>
+          /[!@#$%^&*]/.test(value) ||
+          "**Must include at least one special character",
+
+        digit: (value) =>
+          /[0-9]/.test(value) || "**Must include at least one digit",
+
+        length: (value) =>
+          value.length >= 8 || "**Must be at least 8 characters long",
+      },
+    },
+  };
 
   return (
-    <div style={{ color: "whitesmoke" }}>
-      <h1 style={{ color: "red", textAlign: "center" }}>
-        Password Validation Form
-      </h1>
+    <div style={{ color: "skyblue", textAlign: "center" }}>
+      <h1>Password Game</h1>
 
-      <form
-        onSubmit={handleSubmit(submitHandler)}   // ✅ correct usage
-        style={{
-          maxWidth: "700px",
-          margin: "0 auto",
-          textAlign: "left",
-        }}
-      >
-        {/* Password Field */}
+      <form onSubmit={handleSubmit(submithandler)}>
         <div>
-          <label>Password:</label>
+          <label>Password : </label>
           <input
             type="password"
-            {...register("password", {
-              required: "Password is required",
-              minLength: {
-                value: 6,
-                message: "Minimum 6 characters required",
-              },
-            })}
+            placeholder="Enter Password"
+            {...register("password", validationScheme.passwordValidator)}
           />
-          {errors.password && (
-            <p style={{ color: "red" }}>{errors.password.message}</p>
-          )}
+          <span style={{ color: "red" }}>
+            {errors.password?.message}
+          </span>
         </div>
 
-        {/* Confirm Password */}
         <div>
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            {...register("confirmPassword", {
-              required: "Confirm Password is required",
-              validate: (value) =>
-                value === password || "Passwords do not match",
-            })}
-          />
-          {errors.confirmPassword && (
-            <p style={{ color: "red" }}>
-              {errors.confirmPassword.message}
-            </p>
-          )}
+          <input type="submit" />
         </div>
 
-        <button type="submit">Submit</button>
+        <div>
+          <h5 style={{ color: /[A-Z]/.test(password) ? "green" : "red" }}>
+            1. Must contain 1 capital letter
+          </h5>
+
+          <h5 style={{ color: /[a-z]/.test(password) ? "green" : "red" }}>
+            2. Must contain 1 small letter
+          </h5>
+
+          <h5 style={{ color: /[!@#$%^&*]/.test(password) ? "green" : "red" }}>
+            3. At least 1 special character
+          </h5>
+
+          <h5 style={{ color: /[0-9]/.test(password) ? "green" : "red" }}>
+            4. Must include 1 digit
+          </h5>
+
+          <h5 style={{ color: password.length >= 8 ? "green" : "red" }}>
+            5. Minimum length 8
+          </h5>
+        </div>
       </form>
     </div>
   );
