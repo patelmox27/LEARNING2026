@@ -43,6 +43,11 @@ import { PasswordForm } from './components/form/PasswordForm';
 import { ApiDemo1 } from './components/api/ApiDemo1';
 import { ApiDemo2 } from './components/api/ApiDemo2';
 import { ApiDemo3 } from './components/api/ApiDemo3';
+import { Omdb } from './components/api/Omdb';
+import { Imdb } from './components/api/Imdb';
+import { MovieDetails } from './components/api/MovieDetail';
+import { Apidemo4 } from './components/api/Apidemo4';
+
 
 function App() {
   useEffect(() => {
@@ -91,6 +96,10 @@ function App() {
         <Route path='/ApiDemo1' element={<ApiDemo1 />} />
         <Route path='/ApiDemo2' element={<ApiDemo2 />} />
         <Route path='/ApiDemo3' element={<ApiDemo3 />} />
+        <Route path='/Omdb' element={<Omdb />} />
+        <Route path='/Imdb' element={<Imdb />} />
+        <Route path='/Apidemo4' element={<Apidemo4 />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
 
 
 
