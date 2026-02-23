@@ -28,32 +28,36 @@ export const Omdb = () => {
         <input type='text' value={searchParam} onChange={searchParamHandler} />
       </div>
       <button onClick={searchmovies}>Search</button>
-
-      <table className='table table-dark'>
-        <thead>
-          <tr>
-            <th>IMDB ID</th>
-            <th>TITLE</th>
-            <th>YEAR</th>
-            <th>POSTER</th>
-          </tr>
-        </thead>
-        <tbody>
-          {movies.map((movie) => {
-            return <tr>
-              <td>{movie.imdbID}</td>
-              <td>{movie.Title}</td>
-              <td>{movie.Year}</td>
-              <td>
-                <img src={movie.Poster} style={{ height: "150px", width: "150px" }}></img>
-              </td>
+      {
+        movies.length > 0 &&
+        <table className='table table-dark'>
+          <thead>
+            <tr>
+              <th>IMDB ID</th>
+              <th>TITLE</th>
+              <th>YEAR</th>
+              <th>POSTER</th>
             </tr>
-          })
+          </thead>
+          <tbody>
+            {
+              movies.map((movie) => {
+                return <tr>
+                  <td>{movie.imdbID}</td>
+                  <td>{movie.Title}</td>
+                  <td>{movie.Year}</td>
+                  <td>
+                    <img src={movie.Poster} style={{ height: "150px", width: "150px" }}></img>
+                  </td>
+                </tr>
+              })
 
-          }
+            }
 
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      }
+
 
 
     </div>
